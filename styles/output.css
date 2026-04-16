@@ -1,7 +1,6 @@
 .navBar {
   font-size: xx-small;
   display: flex;
-  //justify-content: flex-end;
   gap: 20px;
 }
 
@@ -19,8 +18,8 @@ h3 {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  &__header {
-    display: block;
-    color: red;
-  }
+}
+.first-Page__header {
+  display: block;
+  color: red;
 }
