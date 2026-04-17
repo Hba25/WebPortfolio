@@ -22,12 +22,12 @@ h3 {
 }
 
 .first-Page {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(0, 85, 255);
-  width: fit-content;
-  height: fit-content;
   justify-content: center;
+  border: 2px solid rgb(0, 85, 255);
 }
 .first-Page__text {
   display: flex;
@@ -35,18 +35,21 @@ h3 {
 }
 .first-Page__trueContainer {
   display: flex;
-  border: 2px solid yellow;
-  width: fit-content;
+  justify-content: space-between;
+  width: 100%;
   gap: 20px;
+  border: 2px solid yellow;
 }
 .first-Page__middle {
-  border: 2px solid green;
+  flex: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
 .first-Page__rightBadges {
   margin-top: 20px;
+  flex-shrink: 0;
   display: flex;
   border: 2px solid black;
   flex-direction: column;
@@ -60,6 +63,7 @@ h3 {
 .first-Page__leftBadges {
   margin-top: 20px;
   display: flex;
+  flex-shrink: 0;
   border: 2px solid black;
   flex-direction: column;
   justify-content: space-between;
@@ -85,4 +89,105 @@ h3 {
 }
 .first-Page__tagline {
   border: 2px solid black;
+}
+
+.second-Page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid rgb(0, 85, 255);
+}
+.second-Page__text {
+  display: flex;
+  flex-direction: column;
+}
+.second-Page__trueContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  border: 2px solid yellow;
+}
+.second-Page__middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.second-Page__rightBadges {
+  margin-top: 20px;
+  flex-shrink: 0;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+.second-Page__rightBadges img {
+  height: 50px;
+  width: 50px;
+}
+.second-Page__leftBadges {
+  margin-top: 20px;
+  display: flex;
+  flex-shrink: 0;
+  border: 2px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.second-Page__leftBadges img {
+  height: 50px;
+  width: 50px;
+}
+.second-Page__header {
+  color: rgb(130, 69, 69);
+  border: 2px solid black;
+  margin: 10px;
+}
+.second-Page__myImage {
+  border: 2px solid rgb(27, 31, 141);
+  width: 30%;
+  max-width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  max-width: 25vw;
+  object-fit: contain;
+}
+.second-Page__blurb {
+  border: 2px solid black;
+  display: block;
+  font-size: medium;
+  margin: 10px;
+}
+
+.third-Page {
+  display: flex;
+  border: 2px solid rgb(140, 62, 149);
+  width: 100%;
+  min-height: 100vh;
+}
+.third-Page__cardsContainer {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  border: 2px solid orange;
+}
+.third-Page .card {
+  border: 2px solid rgb(14, 11, 60);
+  display: flex;
+  width: calc(50% - 4px);
+}
+.third-Page .cardImage {
+  width: 100%;
+}
+.third-Page__myImage {
+  border: 2px solid rgb(27, 31, 141);
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  align-self: flex-end;
 }

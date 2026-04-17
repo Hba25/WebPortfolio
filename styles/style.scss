@@ -23,13 +23,12 @@ h3 {
 }
 
 .first-Page {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(0, 85, 255);
-  //min-height: 100vh;
-  width: fit-content;
-  height: fit-content;
   justify-content: center;
+  border: 2px solid rgb(0, 85, 255);
   //align-items: center;
 
   &__text {
@@ -40,10 +39,10 @@ h3 {
 
   &__trueContainer {
     display: flex;
+    justify-content: space-between; // badges to edges
+    width: 100%;
+    gap: 20px; // minimum space between items
     border: 2px solid yellow;
-    width: fit-content;
-    //margin: 0;
-    gap: 20px;
     //justify-content: space-between;
     //max-height: 100%;
     //width: 100%;
@@ -51,19 +50,17 @@ h3 {
   }
 
   &__middle {
-    border: 2px solid green;
+    flex: 1; // takes all available space between badges
     display: flex;
-    //flex-direction: row;
-    //flex-grow: 1;
-    //flex: 1;
+    justify-content: center;
     align-items: center;
-    //justify-content: center;
     gap: 20px;
     //min-height: 0;
   }
   &__rightBadges {
     margin-top: 20px;
     //height: 80%;
+    flex-shrink: 0;
     display: flex;
     border: 2px solid black;
     flex-direction: column;
@@ -80,6 +77,7 @@ h3 {
     margin-top: 20px;
     //height: 80%;
     display: flex;
+    flex-shrink: 0;
     border: 2px solid black;
     flex-direction: column;
     //align-items: flex-start;
@@ -111,5 +109,140 @@ h3 {
   }
   &__tagline {
     border: 2px solid black;
+  }
+}
+
+.second-Page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid rgb(0, 85, 255);
+  //align-items: center;
+
+  &__text {
+    display: flex;
+    //flex: 1;
+    flex-direction: column;
+  }
+
+  &__trueContainer {
+    display: flex;
+    justify-content: space-between; // badges to edges
+    width: 100%;
+    gap: 20px; // minimum space between items
+    border: 2px solid yellow;
+    //justify-content: space-between;
+    //max-height: 100%;
+    //width: 100%;
+    //min-height: 0;
+  }
+
+  &__middle {
+    flex: 1; // takes all available space between badges
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    //min-height: 0;
+  }
+  &__rightBadges {
+    margin-top: 20px;
+    //height: 80%;
+    flex-shrink: 0;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    //align-self: flex-start; //makes container shrink to fit content!
+    //justify-self: flex-start;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  &__leftBadges {
+    margin-top: 20px;
+    //height: 80%;
+    display: flex;
+    flex-shrink: 0;
+    border: 2px solid black;
+    flex-direction: column;
+    //align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    //makes container shrink to fit content!
+    //justify-self: flex-start;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  &__header {
+    color: rgb(130, 69, 69);
+    border: 2px solid black;
+    //align-self: flex-start;
+    margin: 10px;
+  }
+  &__myImage {
+    border: 2px solid rgb(27, 31, 141);
+    //flex: 1;
+    width: 30%;
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    max-width: 25vw;
+    object-fit: contain;
+    //min-height: 0;
+  }
+  &__blurb {
+    border: 2px solid black;
+    display: block;
+    font-size: medium;
+    margin: 10px;
+  }
+}
+
+.third-Page {
+  display: flex;
+  border: 2px solid rgb(140, 62, 149);
+  width: 100%;
+  min-height: 100vh;
+
+  &__cardsContainer {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    //align-items: center;
+    border: 2px solid orange;
+  }
+  .card {
+    border: 2px solid rgb(14, 11, 60);
+    //flex: 1;
+    display: flex;
+    width: calc(50% - 4px);
+    //flex-direction: column;
+  }
+
+  .cardImage {
+    width: 100%;
+  }
+  &__myImage {
+    border: 2px solid rgb(27, 31, 141);
+    height: 50vh;
+    width: 50vw;
+    //flex: 1;
+    display: flex;
+    align-self: flex-end;
+    //width: 100%;
+    //max-width: 200px;
+    //height: auto;
+    //flex-shrink: 0;
+    //max-width: 25vw;
+    //object-fit: contain;
+    //min-height: 0;
   }
 }
