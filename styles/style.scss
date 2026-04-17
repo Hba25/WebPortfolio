@@ -17,25 +17,33 @@ h3 {
 
 .first-Page {
   height: 100vh;
+  //width: 100%;
   display: flex;
   flex-direction: column;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__trueContainer {
     display: flex;
     border: 2px solid yellow;
-    max-height: 500px;
+    justify-content: center;
+    max-width: fit-content;
+    gap: 20px;
+    //max-height: 100%;
     //width: 100%;
+    //min-height: 0;
   }
 
   &__middle {
     border: 2px solid green;
-    flex-grow: 1;
-    object-fit: contain;
-  }
-
-  &__myImage {
-    width: 100%;
-    max-height: 81%;
+    display: flex;
+    flex-direction: row;
+    //flex-grow: 1;
+    //flex: 1;
+    min-height: 0;
   }
   &__rightBadges {
     margin-top: 20px;
@@ -45,7 +53,7 @@ h3 {
     flex-direction: column;
     //align-items: flex-start;
     justify-content: space-between;
-    align-self: flex-start; //makes container shrink to fit content!
+    //align-self: flex-start; //makes container shrink to fit content!
     //justify-self: flex-start;
     img {
       height: 50px;
@@ -72,22 +80,28 @@ h3 {
 
   &__content {
     display: flex;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    //flex: 1;
+    //margin: 0;
+    //padding: 0;
+    //width: 100%;
     flex-direction: column;
     border: 2px solid rgb(192, 33, 33);
+    //min-height: 0;
     //align-items: center;
   }
   &__header {
-    display: flex;
-    color: red;
+    color: rgb(130, 69, 69);
     border: 2px solid black;
-    flex: 1;
   }
   &__myImage {
-    border: 2px solid black;
-    flex: 1;
+    border: 2px solid rgb(27, 31, 141);
+    //flex: 1;
+    width: 150px;
+    height: auto;
+    //flex-shrink: 1;
+    max-width: 25vw;
+    object-fit: contain;
+    //min-height: 0;
   }
   &__tagline {
     border: 2px solid black;
