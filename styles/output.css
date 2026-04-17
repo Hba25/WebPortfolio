@@ -19,7 +19,59 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.first-Page__trueContainer {
+  display: flex;
+  width: 100%;
+}
+.first-Page__middle {
+  border: 2px solid black;
+}
+.first-Page__rightBadges {
+  margin-top: 20px;
+  height: 80%;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+.first-Page__rightBadges img {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+}
+.first-Page__leftBadges {
+  margin-top: 20px;
+  height: 80%;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+.first-Page__leftBadges img {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+}
+.first-Page__content {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-direction: column;
+  border: 2px solid black;
+}
 .first-Page__header {
-  display: block;
+  display: flex;
   color: red;
+  border: 2px solid black;
+  flex: 1;
+}
+.first-Page__myImage {
+  border: 2px solid black;
+  flex: 1;
+}
+.first-Page__tagline {
+  border: 2px solid black;
 }

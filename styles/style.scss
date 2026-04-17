@@ -19,8 +19,68 @@ h3 {
   height: 100vh;
   display: flex;
   flex-direction: column;
+
+  &__trueContainer {
+    display: flex;
+    width: 100%;
+  }
+
+  &__middle {
+    border: 2px solid black;
+  }
+  &__rightBadges {
+    margin-top: 20px;
+    height: 80%;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    //align-items: flex-start;
+    justify-content: space-between;
+    align-self: flex-start; //makes container shrink to fit content!
+    //justify-self: flex-start;
+    img {
+      height: 50px;
+      width: 50px;
+      border: 2px solid black;
+    }
+  }
+  &__leftBadges {
+    margin-top: 20px;
+    height: 80%;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    //align-items: flex-start;
+    justify-content: space-between;
+    align-self: flex-start; //makes container shrink to fit content!
+    //justify-self: flex-start;
+    img {
+      height: 50px;
+      width: 50px;
+      border: 2px solid black;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    border: 2px solid black;
+    //align-items: center;
+  }
   &__header {
-    display: block;
+    display: flex;
     color: red;
+    border: 2px solid black;
+    flex: 1;
+  }
+  &__myImage {
+    border: 2px solid black;
+    flex: 1;
+  }
+  &__tagline {
+    border: 2px solid black;
   }
 }
