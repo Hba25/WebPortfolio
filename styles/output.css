@@ -170,6 +170,23 @@ h3 {
   width: 100%;
   min-height: 100vh;
 }
+.third-Page__firstCard {
+  display: flex;
+  width: fit-content;
+  border: 33px solid rgb(31, 255, 57);
+}
+.third-Page__secondCard {
+  display: flex;
+  width: fit-content;
+  border: 33px solid rgb(31, 255, 57);
+}
+.third-Page .cardHeader {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  justify-content: center;
+  border: 2px solid rgb(140, 62, 149);
+}
 .third-Page__cardsContainer {
   display: flex;
   flex: 1;
@@ -180,14 +197,56 @@ h3 {
   border: 2px solid rgb(14, 11, 60);
   display: flex;
   width: calc(50% - 4px);
+  flex-direction: column;
+  object-fit: contain;
 }
 .third-Page .cardImage {
-  width: 100%;
-}
-.third-Page__myImage {
-  border: 2px solid rgb(27, 31, 141);
-  height: 50vh;
-  width: 50vw;
   display: flex;
-  align-self: flex-end;
+  margin-top: auto;
+  border: 2px solid rgb(36, 103, 21);
+  object-fit: contain;
+  max-width: 100%;
+}
+.third-Page__card1Image {
+  border: 33px solid rgb(27, 31, 141);
+  display: flex;
+  object-fit: contain;
+}
+.third-Page__card2Image {
+  border: 33px solid rgb(27, 31, 141);
+  display: flex;
+  object-fit: contain;
+}
+
+.footer-Container {
+  background-color: black;
+  color: azure;
+  display: flex;
+}
+.footer-Container__footerLinks {
+  display: flex;
+  width: 100%;
+  border: 2px solid rgb(0, 85, 255);
+  justify-content: space-between;
+}
+.footer-Container__footerText {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-Container__footerHyperlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid rgb(236, 21, 21);
+  width: 30%;
+  background-color: blueviolet;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.footer-Container .icon {
+  display: flex;
+  width: 2.5rem;
+  height: auto;
+  border: 2px solid rgb(18, 230, 184);
 }
