@@ -292,7 +292,7 @@ h3 {
 }
 
 .footer-Container {
-  background-color: black;
+  background-color: rgb(100, 19, 19);
   color: azure;
   display: flex;
 
@@ -304,7 +304,9 @@ h3 {
   }
   &__footerText {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    font-size: large;
+    align-content: center;
   }
 
   &__footerHyperlinks {
@@ -313,16 +315,18 @@ h3 {
     justify-content: space-between;
     border: 2px solid rgb(236, 21, 21);
     width: 30%;
-    background-color: blueviolet;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    align-items: center;
   }
 
   .icon {
     display: flex;
     width: 2.5rem;
-    height: auto;
-    border: 2px solid rgb(18, 230, 184);
+  }
+  &__hlinkedicons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
   }
 }
