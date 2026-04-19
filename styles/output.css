@@ -1,3 +1,24 @@
+.first-Page__leftBadges, .first-Page__rightBadges {
+  margin-top: 20px;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.first-Page__leftBadges img, .first-Page__rightBadges img {
+  height: 50px;
+  width: 50px;
+}
+
+.third-Page__fourthCard, .third-Page__thirdCard, .third-Page__secondCard, .third-Page__firstCard {
+  display: flex;
+}
+
 body {
   margin: 0;
 }
@@ -23,7 +44,6 @@ h3 {
 
 .first-Page {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,32 +66,6 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-.first-Page__rightBadges {
-  margin-top: 20px;
-  flex-shrink: 0;
-  display: flex;
-  border: 2px solid black;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: space-between;
-}
-.first-Page__rightBadges img {
-  height: 50px;
-  width: 50px;
-}
-.first-Page__leftBadges {
-  margin-top: 20px;
-  display: flex;
-  flex-shrink: 0;
-  border: 2px solid black;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-}
-.first-Page__leftBadges img {
-  height: 50px;
-  width: 50px;
 }
 .first-Page__header {
   color: rgb(130, 69, 69);
@@ -164,21 +158,15 @@ h3 {
   margin: 10px;
 }
 
+* {
+  border: none !important;
+}
+
 .third-Page {
   display: flex;
   border: 2px solid rgb(140, 62, 149);
   width: 100%;
   min-height: 100vh;
-}
-.third-Page__firstCard {
-  display: flex;
-  width: fit-content;
-  border: 33px solid rgb(31, 255, 57);
-}
-.third-Page__secondCard {
-  display: flex;
-  width: fit-content;
-  border: 33px solid rgb(31, 255, 57);
 }
 .third-Page .cardHeader {
   display: flex;
@@ -194,28 +182,30 @@ h3 {
   border: 2px solid orange;
 }
 .third-Page .card {
-  border: 2px solid rgb(14, 11, 60);
+  border: 2px solid rgb(246, 10, 10);
   display: flex;
   width: calc(50% - 4px);
   flex-direction: column;
   object-fit: contain;
+  align-content: center;
 }
 .third-Page .cardImage {
   display: flex;
   margin-top: auto;
-  border: 2px solid rgb(36, 103, 21);
   object-fit: contain;
   max-width: 100%;
 }
 .third-Page__card1Image {
-  border: 33px solid rgb(27, 31, 141);
+  width: calc(70% - 4px);
+  align-self: center;
   display: flex;
   object-fit: contain;
 }
 .third-Page__card2Image {
-  border: 33px solid rgb(27, 31, 141);
   display: flex;
   object-fit: contain;
+  width: calc(70% - 4px);
+  align-self: center;
 }
 
 .footer-Container {

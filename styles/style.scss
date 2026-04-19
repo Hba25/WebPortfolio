@@ -1,3 +1,30 @@
+%firstpage-icons {
+  margin-top: 20px;
+  //height: 80%;
+  //flex-shrink: 0;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  //gap: 20px;
+  justify-content: space-between;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  //align-self: flex-start; //makes container shrink to fit content!
+  //justify-self: flex-start;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+%thirdpage-cards {
+  display: flex;
+  //width: fit-content;
+  //border: 33px solid rgb(31, 255, 57);
+}
 body {
   margin: 0;
 }
@@ -24,7 +51,7 @@ h3 {
 
 .first-Page {
   width: 100%;
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,37 +85,10 @@ h3 {
     //min-height: 0;
   }
   &__rightBadges {
-    margin-top: 20px;
-    //height: 80%;
-    flex-shrink: 0;
-    display: flex;
-    border: 2px solid black;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
-    //align-self: flex-start; //makes container shrink to fit content!
-    //justify-self: flex-start;
-    img {
-      height: 50px;
-      width: 50px;
-    }
+    @extend %firstpage-icons;
   }
   &__leftBadges {
-    margin-top: 20px;
-    //height: 80%;
-    display: flex;
-    flex-shrink: 0;
-    border: 2px solid black;
-    flex-direction: column;
-    //align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-    //makes container shrink to fit content!
-    //justify-self: flex-start;
-    img {
-      height: 50px;
-      width: 50px;
-    }
+    @extend %firstpage-icons;
   }
 
   &__header {
@@ -205,7 +205,10 @@ h3 {
     margin: 10px;
   }
 }
-
+* {
+  border: none !important;
+  //margin: 0 20px 0 20px;
+}
 .third-Page {
   display: flex;
   border: 2px solid rgb(140, 62, 149);
@@ -213,15 +216,18 @@ h3 {
   min-height: 100vh;
 
   &__firstCard {
-    display: flex;
-    width: fit-content;
-    border: 33px solid rgb(31, 255, 57);
+    @extend %thirdpage-cards;
   }
   &__secondCard {
-    display: flex;
-    width: fit-content;
-    border: 33px solid rgb(31, 255, 57);
+    @extend %thirdpage-cards;
   }
+  &__thirdCard {
+    @extend %thirdpage-cards;
+  }
+  &__fourthCard {
+    @extend %thirdpage-cards;
+  }
+
   .cardHeader {
     display: flex;
     width: fit-content;
@@ -238,12 +244,13 @@ h3 {
     border: 2px solid orange;
   }
   .card {
-    border: 2px solid rgb(14, 11, 60);
+    border: 2px solid rgb(246, 10, 10);
     //flex: 1;
     display: flex;
     width: calc(50% - 4px);
     flex-direction: column;
     object-fit: contain;
+    align-content: center;
   }
 
   .cardImage {
@@ -252,14 +259,16 @@ h3 {
     //width: 50vw;
     //justify-content: center;
     margin-top: auto;
-    border: 2px solid rgb(36, 103, 21);
+    //border: 2px solid rgb(36, 103, 21);
     object-fit: contain;
 
     max-width: 100%;
   }
   &__card1Image {
-    border: 33px solid rgb(27, 31, 141);
+    //border: 3px solid rgb(27, 31, 141);
     //height: 50vh;
+    width: calc(70% - 4px);
+    align-self: center;
     //width: 50vw;
     //flex: 1;
     display: flex;
@@ -274,12 +283,14 @@ h3 {
     //min-height: 0;
   }
   &__card2Image {
-    border: 33px solid rgb(27, 31, 141);
+    //border: 33px solid rgb(27, 31, 141);
     //height: 50vh;
     //width: 50vw;
     //flex: 1;
     display: flex;
     object-fit: contain;
+    width: calc(70% - 4px);
+    align-self: center;
 
     //width: 100%;
     //max-width: 200px;
