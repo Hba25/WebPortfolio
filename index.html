@@ -3,33 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>My Website Portfolio</title>
     <link rel="stylesheet" href="styles/output.css" />
   </head>
 
   <body>
-    <div class="first-Page">
+    <div class="first-Page format">
       <div class="topNavBar">
-        <h3>My name!</h3>
+        <h3>Bilal Hafeez</h3>
         <nav class="navBar">
-          <a class="home" href="">Some link</a>
-          <a class="about" href="">Some link2</a>
-          <a class="projects" href="">Some link3</a>
-          <a class="Contact" href="">Some link4</a>
+          <a class="aboutMe" href="#second-Page">About me >:)</a>
+          <a class="myProjects" href="#third-Page">My Projects</a>
+          <a class="contactMe" href="#footerLinks">Contact me</a>
         </nav>
       </div>
 
-      <div class="first-Page__trueContainer">
+      <div id="first-Page" class="first-Page__trueContainer">
         <div class="first-Page__leftBadges">
-          <img src="/WebPortfolio/images/number1.jpg" alt="badge number 1" />
-          <img src="/WebPortfolio/images/number2.jpg" alt="badge number 2" />
-          <img src="/WebPortfolio/images/number3.jpg" alt="badge number 3" />
+          <img src="/WebPortfolio/images/leftCSS3.png" alt="badge number 1" />
+          <img src="/WebPortfolio/images/leftgit.png" alt="badge number 2" />
+          <img src="/WebPortfolio/images/lefthtml5.png" alt="badge number 3" />
         </div>
         <div class="first-Page__middle">
           <div class="first-Page__text">
-            <h2 class="first-Page__header">Hey!Joe Blog Its me</h2>
+            <h2 class="first-Page__header">Hey!</h2>
             <h3 class="first-Page__tagline">
-              Junior software dev based in the UK
+              A Junior software dev based in the UK
             </h3>
           </div>
           <img
@@ -39,14 +38,14 @@
           />
         </div>
         <div class="first-Page__rightBadges">
-          <img src="/WebPortfolio/images/number1.jpg" alt="badge number 1" />
-          <img src="/WebPortfolio/images/number2.jpg" alt="badge number 2" />
-          <img src="/WebPortfolio/images/number3.jpg" alt="badge number 3" />
+          <img src="/WebPortfolio/images/rightBEM.png" alt="badge number 1" />
+          <img src="/WebPortfolio/images/rightjava.png" alt="badge number 2" />
+          <img src="/WebPortfolio/images/rightSCSS.png" alt="badge number 3" />
         </div>
       </div>
     </div>
 
-    <div class="second-Page">
+    <div id="second-Page" class="second-Page format">
       <div class="second-Page__trueContainer">
         <div class="second-Page__middle">
           <div class="second-Page__text">
@@ -74,7 +73,7 @@
       </div>
     </div>
 
-    <div class="third-Page">
+    <div id="third-Page" class="third-Page format">
       <div class="third-Page__cardsContainer">
         <div class="card third-Page__firstCard">
           <h3 class="cardHeader third-Page__firstCard">My first project</h3>
@@ -92,16 +91,16 @@
             alt="Image of me"
           />
         </div>
-        <div class="card third-Page__secondCard">
-          <h3 class="cardHeader third-Page__secondCard">My second project</h3>
+        <div class="card third-Page__thirdCard">
+          <h3 class="cardHeader third-Page__thirdCard">My third project</h3>
           <img
             class="cardImage third-Page__card2Image"
             src="/WebPortfolio/images/card2.jpg"
             alt="Image of me"
           />
         </div>
-        <div class="card third-Page__secondCard">
-          <h3 class="cardHeader third-Page__secondCard">My second project</h3>
+        <div class="card third-Page__fourthCard">
+          <h3 class="cardHeader third-Page__fourthCard">My fourth project</h3>
           <img
             class="cardImage third-Page__card2Image"
             src="/WebPortfolio/images/card2.jpg"
@@ -115,22 +114,26 @@
     <footer>I'm a footer! myemail@hotmail.com</footer> -->
   </body>
 
-  <footer class="footer-Container">
+  <footer id="footerLinks" class="footer-Container">
     <section class="footer-Container__footerLinks">
       <h3 class="footer-Container__footerText">
-        I'm a footer! myemail@hotmail.com
+        bh25dev@outlook.com
       </h3>
       <div class="footer-Container__footerHyperlinks">
         <nav>
           <button class="footer-Container__hlinkedicons">
-            <img
-              class="icon footer-Container__cvIcon"
-              src="/WebPortfolio/images/cvicon.png"
-              alt="Icon of my CV"
-            />
+            <!-- <a href="/WebPortfolio/images/CV.pdf" download disabled>Disabled Download File -->
+              <img
+                class="icon footer-Container__cvIcon"
+                src="/WebPortfolio/images/cvicon.png"
+                alt="Icon of my CV"
+              />
+            </a>
+            </a>
           </button>
         </nav>
         <nav>
+          <a class="linkedinHl" href="https://www.linkedin.com/in/bilal-hafeez-9aa833207/">
           <button class="footer-Container__hlinkedicons">
             <img
               class="icon footer-Container__linkedinIcon"
@@ -138,8 +141,10 @@
               alt="Icon of my CV"
             />
           </button>
+          </a>
         </nav>
         <nav>
+          <a class="githubHl" href="https://github.com/Hba25/WebPortfolio">
           <button class="footer-Container__hlinkedicons">
             <img
               class="icon footer-Container__GithubIcon"
@@ -148,6 +153,7 @@
             />
           </button>
         </nav>
+        </a>
       </div>
     </section>
   </footer>
