@@ -1,3 +1,5 @@
+@use "./media.scss";
+
 %firstpage-icons {
   margin-top: 20px;
   //height: 80%;
@@ -8,23 +10,33 @@
   //gap: 20px;
   justify-content: space-between;
   display: flex;
-  margin: 0;
+
   padding: 0;
   border: 0;
-  background: transparent;
+  align-items: center;
   //align-self: flex-start; //makes container shrink to fit content!
   //justify-self: flex-start;
   img {
-    height: 75px;
-    width: 75px;
+    width: 5rem;
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+    background: transparent;
+    opacity: 0.5;
   }
 }
 
 .format {
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100%;
   box-sizing: border-box;
+  padding-left: 5rem;
+  padding-right: 5rem;
   background-color: rgba(237, 242, 244, 0.5);
+
+  @include media.mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 %thirdpage-cards {
@@ -32,8 +44,50 @@
   //width: fit-content;
   //border: 33px solid rgb(31, 255, 57);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   margin: 0;
+  //display: grid;
+  flex-direction: column;
+  justify-items: center;
+
+  @include media.mobile {
+    //grid-template-columns: 1fr;
+    font-size: 30px;
+    color: red;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    // img {
+    //   width: 90vw;
+    //   max-width: 100%;
+    // }
+  }
+
+  @include media.tablet {
+    //grid-template-columns: repeat(2, 1fr);
+    font-size: 60px;
+    color: rgb(165, 82, 82);
+    // img {
+    //   width: 45vw;
+    //   max-width: 100%;
+    // }
+  }
+  @include media.tablet-landscape {
+    //grid-template-columns: repeat(3, 1fr);
+    font-size: 90px;
+    color: rgb(20, 21, 78);
+    // img {
+    //   width: 25vw;
+    //   max-width: 100%;
+    // }
+  }
 }
 
 .navBar {
@@ -50,6 +104,10 @@ body {
   border: 2px solid rgb(148, 30, 125);
   width: 100%;
   background-color: rgba(237, 242, 244, 0.772);
+  @include media.mobile {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 h3 {
@@ -82,6 +140,11 @@ h3 {
     //max-height: 100%;
     //width: 100%;
     //min-height: 0;
+    @include media.mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
   }
 
   &__middle {
@@ -107,12 +170,12 @@ h3 {
   &__myImage {
     border: 2px solid rgb(27, 31, 141);
     //flex: 1;
-    width: 30%;
+    width: 10rem;
     max-width: 200px;
     height: auto;
     flex-shrink: 0;
-    max-width: 25vw;
-    object-fit: contain;
+
+    //object-fit: contain;
     //min-height: 0;
   }
   &__tagline {
@@ -167,8 +230,8 @@ h3 {
     //align-self: flex-start; //makes container shrink to fit content!
     //justify-self: flex-start;
     img {
-      height: 50px;
-      width: 50px;
+      height: auto;
+      width: 3rem;
     }
   }
   &__leftBadges {
@@ -184,8 +247,8 @@ h3 {
     //makes container shrink to fit content!
     //justify-self: flex-start;
     img {
-      height: 50px;
-      width: 50px;
+      height: auto;
+      width: 3rem;
     }
   }
 
@@ -198,12 +261,12 @@ h3 {
   &__myImage {
     border: 2px solid rgb(27, 31, 141);
     //flex: 1;
-    width: 30%;
-    max-width: 200px;
+    width: 10rem;
+    //max-width: 200px;
     height: auto;
-    flex-shrink: 0;
-    max-width: 25vw;
-    object-fit: contain;
+    //flex-shrink: 0;
+    //max-width: 25vw;
+    //object-fit: contain;
     //min-height: 0;
   }
   &__blurb {
@@ -248,7 +311,7 @@ h3 {
 
   &__cardsContainer {
     display: flex;
-    flex: 1;
+    //flex: 1;
     flex-wrap: wrap;
     align-items: center;
     border: 2px solid orange;
@@ -258,15 +321,20 @@ h3 {
     //flex: 1;
     display: flex;
     width: calc(50% - 4px);
+    max-width: 100%;
     flex-direction: column;
     object-fit: contain;
     align-content: center;
+
+    @include media.mobile {
+      width: 100%;
+    }
   }
 
   .cardImage {
     display: flex;
-    //height: 50vh;
-    //width: 50vw;
+    height: auto;
+    width: 30vw;
     //justify-content: center;
     margin-top: auto;
     //border: 2px solid rgb(36, 103, 21);
@@ -277,7 +345,7 @@ h3 {
   &__card1Image {
     //border: 3px solid rgb(27, 31, 141);
     //height: 50vh;
-    width: calc(70% - 4px);
+    //width: calc(50% - 4px);
     align-self: center;
     //width: 50vw;
     //flex: 1;
@@ -299,7 +367,7 @@ h3 {
     //flex: 1;
     display: flex;
     object-fit: contain;
-    width: calc(70% - 4px);
+    //width: calc(70% - 4px);
     align-self: center;
 
     //width: 100%;
@@ -316,6 +384,7 @@ h3 {
   background-color: rgb(100, 19, 19);
   color: azure;
   display: flex;
+  width: 100%;
 
   &__footerLinks {
     display: flex;
@@ -338,6 +407,11 @@ h3 {
     width: 30%;
     align-items: center;
   }
+  @include media.mobile {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
 
   .icon {
     display: flex;
@@ -350,7 +424,4 @@ h3 {
     border: 0;
     background: transparent;
   }
-}
-
-@media (max-width: 768px) {
 }

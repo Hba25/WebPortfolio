@@ -5,29 +5,67 @@
   flex-direction: column;
   justify-content: space-between;
   display: flex;
-  margin: 0;
   padding: 0;
   border: 0;
-  background: transparent;
+  align-items: center;
 }
 .first-Page__leftBadges img, .first-Page__rightBadges img {
-  height: 75px;
-  width: 75px;
+  width: 5rem;
+  max-width: 200px;
+  height: auto;
+  margin: 10px;
+  background: transparent;
+  opacity: 0.5;
 }
 
 .format {
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100%;
   box-sizing: border-box;
+  padding-left: 5rem;
+  padding-right: 5rem;
   background-color: rgba(237, 242, 244, 0.5);
+}
+@media only screen and (max-width: 640px) {
+  .format {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .third-Page__fourthCard, .third-Page__thirdCard, .third-Page__secondCard, .third-Page__firstCard {
   display: flex;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   margin: 0;
+  flex-direction: column;
+  justify-items: center;
+}
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 30px;
+    color: red;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+  body {
+    font-size: 60px;
+    color: rgb(165, 82, 82);
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 90px;
+    color: rgb(20, 21, 78);
+  }
 }
 
 .navBar {
@@ -43,6 +81,12 @@ body {
   border: 2px solid rgb(148, 30, 125);
   width: 100%;
   background-color: rgba(237, 242, 244, 0.772);
+}
+@media only screen and (max-width: 640px) {
+  .topNavBar {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 h3 {
@@ -68,6 +112,13 @@ h3 {
   gap: 20px;
   border: 2px solid yellow;
 }
+@media only screen and (max-width: 640px) {
+  .first-Page__trueContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
 .first-Page__middle {
   flex: 1;
   display: flex;
@@ -82,12 +133,10 @@ h3 {
 }
 .first-Page__myImage {
   border: 2px solid rgb(27, 31, 141);
-  width: 30%;
+  width: 10rem;
   max-width: 200px;
   height: auto;
   flex-shrink: 0;
-  max-width: 25vw;
-  object-fit: contain;
 }
 .first-Page__tagline {
   border: 2px solid black;
@@ -129,8 +178,8 @@ h3 {
   justify-content: space-between;
 }
 .second-Page__rightBadges img {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: 3rem;
 }
 .second-Page__leftBadges {
   margin-top: 20px;
@@ -142,8 +191,8 @@ h3 {
   gap: 20px;
 }
 .second-Page__leftBadges img {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: 3rem;
 }
 .second-Page__header {
   color: rgb(130, 69, 69);
@@ -152,12 +201,8 @@ h3 {
 }
 .second-Page__myImage {
   border: 2px solid rgb(27, 31, 141);
-  width: 30%;
-  max-width: 200px;
+  width: 10rem;
   height: auto;
-  flex-shrink: 0;
-  max-width: 25vw;
-  object-fit: contain;
 }
 .second-Page__blurb {
   border: 2px solid black;
@@ -187,7 +232,6 @@ h3 {
 }
 .third-Page__cardsContainer {
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
   align-items: center;
   border: 2px solid orange;
@@ -196,18 +240,25 @@ h3 {
   border: 2px solid rgb(246, 10, 10);
   display: flex;
   width: calc(50% - 4px);
+  max-width: 100%;
   flex-direction: column;
   object-fit: contain;
   align-content: center;
 }
+@media only screen and (max-width: 640px) {
+  .third-Page .card {
+    width: 100%;
+  }
+}
 .third-Page .cardImage {
   display: flex;
+  height: auto;
+  width: 30vw;
   margin-top: auto;
   object-fit: contain;
   max-width: 100%;
 }
 .third-Page__card1Image {
-  width: calc(70% - 4px);
   align-self: center;
   display: flex;
   object-fit: contain;
@@ -215,7 +266,6 @@ h3 {
 .third-Page__card2Image {
   display: flex;
   object-fit: contain;
-  width: calc(70% - 4px);
   align-self: center;
 }
 
@@ -223,6 +273,7 @@ h3 {
   background-color: rgb(100, 19, 19);
   color: azure;
   display: flex;
+  width: 100%;
 }
 .footer-Container__footerLinks {
   display: flex;
@@ -243,6 +294,13 @@ h3 {
   border: 2px solid rgb(236, 21, 21);
   width: 30%;
   align-items: center;
+}
+@media only screen and (max-width: 640px) {
+  .footer-Container {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
 }
 .footer-Container .icon {
   display: flex;
