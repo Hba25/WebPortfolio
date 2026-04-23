@@ -1,4 +1,5 @@
 @use "./media.scss";
+$font-primary: "DM Sans", sans-serif;
 
 %firstpage-icons {
   margin-top: 20px;
@@ -43,6 +44,11 @@
   display: flex;
   //width: fit-content;
   //border: 33px solid rgb(31, 255, 57);
+  img {
+    @include media.mobile {
+      width: 100rem !important;
+    }
+  }
 }
 
 img {
@@ -56,6 +62,7 @@ body {
   //display: grid;
   flex-direction: column;
   justify-items: center;
+  font-family: $font-primary;
 
   @include media.mobile {
     //grid-template-columns: 1fr;
@@ -117,17 +124,20 @@ h3 {
 
 .first-Page {
   width: 100%;
-  //min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 2px solid rgb(0, 85, 255);
+
+  flex: 1;
   //align-items: center;
 
   &__text {
     display: flex;
     //flex: 1;
     flex-direction: column;
+    font-size: 2rem;
   }
 
   &__trueContainer {
@@ -139,6 +149,7 @@ h3 {
     //justify-content: space-between;
     //max-height: 100%;
     //width: 100%;
+    flex: 1;
     //min-height: 0;
     @include media.mobile {
       flex-wrap: wrap;
@@ -154,6 +165,11 @@ h3 {
     align-items: center;
     gap: 20px;
     //min-height: 0;
+    @include media.mobile {
+      order: -1;
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__rightBadges {
     @extend %firstpage-icons;
@@ -170,16 +186,20 @@ h3 {
   &__myImage {
     border: 2px solid rgb(27, 31, 141);
     //flex: 1;
-    width: 10rem;
-    max-width: 200px;
+    width: 100rem;
+    max-width: 20rem;
     height: auto;
     flex-shrink: 0;
+    @include media.mobile {
+      max-width: 10rem;
+    }
 
     //object-fit: contain;
     //min-height: 0;
   }
   &__tagline {
     border: 2px solid black;
+    font-size: 1rem;
   }
 }
 
@@ -261,12 +281,15 @@ h3 {
   &__myImage {
     border: 2px solid rgb(27, 31, 141);
     //flex: 1;
-    width: 10rem;
+    width: 20rem;
     //max-width: 200px;
     height: auto;
     //flex-shrink: 0;
     //max-width: 25vw;
     //object-fit: contain;
+    @include media.mobile {
+      width: 10rem;
+    }
     //min-height: 0;
   }
   &__blurb {
@@ -286,6 +309,20 @@ h3 {
   width: 100%;
   min-height: 100vh;
 
+  &__buttons {
+    display: flex;
+    border: 2px solid black;
+    width: fit-content;
+    align-self: center;
+    font-family: $font-primary;
+  }
+  .code {
+    justify-content: center;
+  }
+  .preview {
+    justify-content: center;
+    font-family: $font-primary;
+  }
   &__firstCard {
     @extend %thirdpage-cards;
   }
@@ -411,6 +448,8 @@ h3 {
     width: 100%;
     justify-content: center;
     gap: 15px;
+    height: 70vh;
+    align-items: center;
   }
 
   .icon {
